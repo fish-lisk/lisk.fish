@@ -1,0 +1,8 @@
+{
+  "name": "lisk.fish",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/georeith/lisk.fish",
+  "author": "George Reith <georeith@gmail.com>",
+  "license": "None"
+}
