@@ -1,3 +1,6 @@
+// Set up environment variables
+require('dotenv').config();
+
 const Hapi = require('hapi');
 
 const server = new Hapi.Server();

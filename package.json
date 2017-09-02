@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
     "hapi": "^16.5.2",
     "lisk-js": "^0.4.5"
   },
