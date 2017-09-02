@@ -6,6 +6,7 @@
   "author": "George Reith <georeith@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "start": "node index.js",
     "lint": "eslint ./",
     "format": "prettier-eslint --write \"{,!(node_modules)/**/}{.*,*}.js\"",
     "precommit": "lint-staged"
