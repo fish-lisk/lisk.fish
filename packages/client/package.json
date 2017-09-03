@@ -7,16 +7,22 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "dev": "yarn start | yarn build:watch",
+    "dev": "concurrently 'yarn start' 'yarn build:watch'",
     "clean": "rm -rf dist",
     "build": "yarn clean; webpack --config webpack.config.js --progress --colors",
     "build:watch": "yarn build -- --watch"
   },
   "dependencies": {
+    "inert": "^4.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
-    "inert": "^4.2.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.0",
     "webpack": "^3.5.5"
   }
 }
