@@ -1,0 +1,12 @@
+{
+  "name": "@lisk.fish/api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "George Reith <georeith@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "lisk-js": "^0.4.5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@lisk.fish/client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "George Reith <georeith@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "yarn start | yarn build:watch",
+    "clean": "rm -rf dist",
+    "build": "yarn clean; webpack --config webpack.config.js --progress --colors",
+    "build:watch": "yarn build -- --watch"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "inert": "^4.2.1",
+    "webpack": "^3.5.5"
+  }
+}

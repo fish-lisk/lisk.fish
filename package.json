@@ -1,13 +1,14 @@
 {
-  "name": "lisk.fish",
+  "name": "@lisk.fish/lisk.fish",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/georeith/lisk.fish",
   "author": "George Reith <georeith@gmail.com>",
   "license": "UNLICENSED",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
     "lint": "eslint ./",
+    "build": "(cd packages/client && yarn build)",
     "format": "prettier-eslint --write \"{,!(node_modules)/**/}{.*,*}.js\"",
     "precommit": "lint-staged"
   },
@@ -18,10 +19,11 @@
       "git add"
     ]
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "hapi": "^16.5.2",
-    "lisk-js": "^0.4.5"
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^4.3.0",

@@ -1,3 +1,9 @@
+# Environment variables
+.env
+
+# Client build
+client/dist
+
 # Logs
 *.log
 npm-debug.log*
@@ -15,6 +21,3 @@ node_modules/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# Environment variables
-.env
