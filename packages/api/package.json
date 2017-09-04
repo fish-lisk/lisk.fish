@@ -7,6 +7,11 @@
   "private": true,
   "dependencies": {
     "dotenv": "^4.0.0",
-    "lisk-js": "^0.4.5"
+    "lisk-js": "^0.4.5",
+    "scrypt": "^6.0.3"
+  },
+  "devDependencies": {
+    "knex": "^0.13.0",
+    "sqlite3": "^3.1.9"
   }
 }
