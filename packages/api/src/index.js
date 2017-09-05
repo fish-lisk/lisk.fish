@@ -1,6 +1,7 @@
 // Set up environment variables
 require('dotenv').config({ path: '../../.env' });
 
+const boom = require('boom');
 const hapiAuthJwt = require('hapi-auth-jwt2');
 const { server } = require('@lisk.fish/server');
 const knex = require('./knex');
@@ -21,7 +22,7 @@ server.register(hapiAuthJwt, (err) => {
                     .select('id');
                 callback(null, !!user);
             } catch (dbErr) {
-                callback(dbErr);
+                callback(boom.badImplementation(dbErr));
             }
         },
     });
