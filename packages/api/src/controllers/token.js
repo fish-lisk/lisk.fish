@@ -7,7 +7,7 @@ async function create(request, reply) {
     const { passphrase } = request.payload;
     const address = request.payload.address.toUpperCase();
     try {
-        const [user] = await knex('users')
+        const [user] = await knex('user')
             .where({ address })
             .select('id', 'passphrase_key', 'public_key');
 
@@ -16,7 +16,7 @@ async function create(request, reply) {
             return;
         }
         const { id, passphrase_key, public_key } = user;
-        const isValidPassphrase = await scrypt.verifKdf(
+        const isValidPassphrase = await scrypt.verifyKdf(
             passphrase_key,
             passphrase,
         );
@@ -33,7 +33,7 @@ async function create(request, reply) {
             {
                 algorithm: 'HS256',
                 issuer: process.env.JWT_ISSUER,
-                subject: id,
+                subject: String(id),
                 expiresIn: '1h',
             },
         );

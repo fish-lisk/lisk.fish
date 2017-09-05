@@ -17,7 +17,7 @@ server.register(hapiAuthJwt, (err) => {
             const id = decoded.sub;
             try {
                 // check if id exists
-                const [user] = await knex('users')
+                const [user] = await knex('user')
                     .where({ id })
                     .select('id');
                 callback(null, !!user);
