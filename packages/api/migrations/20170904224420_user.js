@@ -6,7 +6,7 @@ exports.up = knex =>
             .string('address', 25)
             .notNullable()
             .unique();
-        userTable.string('password', 128).notNullable();
+        userTable.string('passphrase_key', 128).notNullable();
         userTable.string('public_key', 64).notNullable();
     });
 
