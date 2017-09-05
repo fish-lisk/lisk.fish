@@ -32,3 +32,5 @@ server.register(hapiAuthJwt, (err) => {
         server.route(route);
     });
 });
+
+module.exports = server;

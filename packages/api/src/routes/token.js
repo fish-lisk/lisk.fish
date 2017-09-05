@@ -16,6 +16,7 @@ module.exports = [
                     address: joi
                         .string()
                         .required()
+                        .regex(/^[0-9]+L$/, 'numbers followed by L')
                         .max(25)
                         .min(9),
                 },

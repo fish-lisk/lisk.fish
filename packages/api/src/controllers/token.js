@@ -4,8 +4,7 @@ const jwt = require('jsonwebtoken');
 const knex = require('../knex');
 
 async function create(request, reply) {
-    const { passphrase } = request.payload;
-    const address = request.payload.address.toUpperCase();
+    const { passphrase, address } = request.payload;
     try {
         const [user] = await knex('user')
             .where({ address })
