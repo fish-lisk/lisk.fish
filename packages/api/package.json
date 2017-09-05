@@ -1,17 +1,23 @@
 {
   "name": "@lisk.fish/api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "George Reith <georeith@gmail.com>",
   "license": "UNLICENSED",
   "private": true,
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
+    "boom": "^5.2.0",
     "dotenv": "^4.0.0",
+    "hapi-auth-jwt2": "^7.3.0",
+    "jsonwebtoken": "^7.4.3",
+    "knex": "^0.13.0",
     "lisk-js": "^0.4.5",
     "scrypt": "^6.0.3"
   },
   "devDependencies": {
-    "knex": "^0.13.0",
     "sqlite3": "^3.1.9"
   }
 }
