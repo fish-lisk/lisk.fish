@@ -1,28 +1,29 @@
+const path = require('path');
 const inert = require('inert');
 
-const { server, connection } = require('@lisk.fish/server');
+const { server } = require('@lisk.fish/server');
 
 server.register(inert, () => {});
 
 // Treat the /dist folder as a directory
-connection.route({
+server.route({
     method: 'GET',
     path: '/dist/{param*}',
     handler: {
         directory: {
-            path: 'dist',
+            path: path.join(__dirname, 'dist'),
             listing: true,
         },
     },
 });
 
 // Serve index.html to all other routes
-connection.route({
+server.route({
     method: 'GET',
     path: '/{path*}',
     handler: {
         file: {
-            path: 'index.html',
+            path: path.join(__dirname, 'index.html'),
         },
     },
 });

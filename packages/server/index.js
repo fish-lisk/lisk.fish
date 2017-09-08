@@ -16,7 +16,7 @@ const goodOptions = {
         interval: 1000,
     },
     reporters: {
-        fileReporter: [
+        errorReporter: [
             {
                 module: 'good-squeeze',
                 name: 'Squeeze',

@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "dev": "concurrently 'yarn start' 'yarn build:watch'",
+    "dev": "concurrently --kill-others 'yarn start' 'yarn build:watch'",
     "clean": "rm -rf dist",
     "build": "yarn clean; webpack --config webpack.config.js --progress --colors",
     "build:watch": "yarn build -- --watch"
@@ -15,7 +15,8 @@
   "dependencies": {
     "inert": "^4.2.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "server": "link:@lisk.fish/server"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
