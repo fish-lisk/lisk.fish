@@ -8,7 +8,7 @@ server.register(inert, () => {});
 // Treat the /dist folder as a directory
 server.route({
     method: 'GET',
-    path: '/dist/{param*}',
+    path: '/dist/{p*}',
     handler: {
         directory: {
             path: path.join(__dirname, 'dist'),
@@ -20,7 +20,7 @@ server.route({
 // Serve index.html to all other routes
 server.route({
     method: 'GET',
-    path: '/{path*}',
+    path: '/{p*}',
     handler: {
         file: {
             path: path.join(__dirname, 'index.html'),
