@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint ./",
     "start": "node index.js",
-    "build": "yarn workspace @lisk.fish/client build",
+    "build": "yarn workspace @lisk.fish/client build; yarn workspace @lisk.fish/api build",
     "format": "prettier-eslint --write \"{,!(node_modules)/**/}{.*,*}.js\"",
     "postinstall": "yarn build",
     "precommit": "lint-staged"

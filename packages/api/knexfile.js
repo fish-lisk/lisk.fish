@@ -1,11 +1,13 @@
+const path = require('path');
+
 module.exports = {
     development: {
         client: 'sqlite3',
         connection: {
-            filename: './dev.sqlite3',
+            filename: path.join(__dirname, 'dev.sqlite3'),
         },
         seeds: {
-            tableName: './seeds',
+            directory: path.join(__dirname, 'seeds'),
         },
         migrations: {
             tableName: 'knex_migrations',
