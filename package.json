@@ -24,6 +24,7 @@
     "packages/*"
   ],
   "engines": {
+    "node": "^8.4.0",
     "yarn": "^1.0.1"
   },
   "dependencies": {
